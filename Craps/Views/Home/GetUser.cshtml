@@ -1,0 +1,9 @@
+﻿
+@model Craps.Models.HomeModel
+
+@using (Html.BeginForm("GetUser", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.UserName)
+    @Html.ValidationMessageFor(model => model.UserName)
+    <button type="submit">Get User</button>
+}
